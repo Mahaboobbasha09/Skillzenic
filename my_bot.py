@@ -20,6 +20,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("How can I assist you? You can say 'hi', 'ok', or 'do you love me'.")
     elif user_text == "hey":
         await update.message.reply_text("Hey! How's it going? 😊")
+    elif user_text == "what's my name":
+        user_name = update.effective_user.first_name
+        await update.message.reply_text(f"Your name is {user_name}!")
+    elif user_text == "love you":
+        await update.message.reply_text("I love you too! 💖 Bngru")
+    elif user_text == "who are you":
+        await update.message.reply_text("Neku enduku ra pottoda!!")
     elif user_text == "bye":
         await update.message.reply_text("Goodbye! See you next time! 👋")
     else:
